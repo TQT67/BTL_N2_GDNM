@@ -1,1 +1,3 @@
 Ngày 23/10:  upload link figma, file SRS, plan week3
+Ngày 30/10: update file SRS,code giao diện chính, plan week 4, update figma
+Ngày 6/11 : hoàn thiện figma, update file báo cáo, cố gắng hoàn thiện code 
