@@ -60,10 +60,10 @@ export default function Register() {
   })
 
   return (
-    <div className='bg-header-image '>
+    <div className='bg-header-image bg-cover bg-center bg-no-repeat'>
       <Helmet>
-        <title>Đăng ký | TPT Shop</title>
-        <meta name='description' content='Đăng ký tài khoản vào dự án TPT Shop' />
+        <title>Đăng ký | LOGO SHOP</title>
+        <meta name='description' content='Đăng ký tài khoản vào dự án LOGO SHOP' />
       </Helmet>
       <div className='container'>
         <div className='grid grid-cols-1 py-12 lg:grid-cols-5 lg:py-32 lg:pr-10'>
@@ -102,7 +102,7 @@ export default function Register() {
 
               <div className='mt-2'>
                 <Button
-                  className='flex w-full items-center justify-center bg-oranges px-2 py-4 text-sm uppercase text-white hover:opacity-90'
+                  className='flex w-full items-center justify-center bg-blues-gradient px-2 py-4 text-sm uppercase text-white hover:opacity-90'
                   isLoading={registerAccountMutation.isLoading}
                   disabled={registerAccountMutation.isLoading}
                 >
@@ -111,7 +111,7 @@ export default function Register() {
               </div>
               <div className='mt-8 flex items-center justify-center'>
                 <span className='text-gray-400'>Bạn đã có tài khoản?</span>
-                <Link className='ml-1 text-oranges' to='/login'>
+                <Link className='ml-1 text-blues' to='/login'>
                   Đăng nhập
                 </Link>
               </div>

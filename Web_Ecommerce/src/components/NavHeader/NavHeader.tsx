@@ -40,10 +40,10 @@ export default function NavHeader() {
         renderPopover={
           <div className='relative rounded-sm border border-gray-200 bg-white shadow-md'>
             <div className='flex flex-col py-2 pl-3 pr-28'>
-              <button className='px-3 py-2 text-left hover:text-oranges' onClick={() => changeLanguage('vi')}>
+              <button className='px-3 py-2 text-left hover:text-blues' onClick={() => changeLanguage('vi')}>
                 Tiếng Việt
               </button>
-              <button className='mt-2 px-3 py-2 text-left hover:text-oranges' onClick={() => changeLanguage('en')}>
+              <button className='mt-2 px-3 py-2 text-left hover:text-blues' onClick={() => changeLanguage('en')}>
                 English
               </button>
             </div>

@@ -25,12 +25,15 @@ export default function Header() {
   const purchasesInCart = purchasesInCartData?.data.data
 
   return (
-    <div className='bg-[linear-gradient(-180deg,#f53d2d,#f63)] pb-5 pt-2 text-white'>
+    <div
+      className='bg-[linear-gradient(-180deg,#00BBFF,#02A5E0,#006E96,#005E80)]
+ pb-5 pt-2 text-white'
+    >
       <div className='container'>
         <NavHeader />
         <div className='ml-5 mt-4 grid grid-cols-12 items-end gap-4'>
           <Link to='/' className='col-span-2 text-3xl font-bold'>
-            TPT SHOP
+            LOGO SHOP
           </Link>
           <form className='col-span-9' onSubmit={onSubmitSearch}>
             <div className='flex rounded-sm bg-white p-1'>
@@ -40,7 +43,7 @@ export default function Header() {
                 placeholder='Tìm sản phẩm ,thương hiệu, tên shop '
                 {...register('name')}
               />
-              <button className='flex-shrink-0 rounded-sm bg-oranges px-6 py-2 hover:opacity-90'>
+              <button className='blues-gradient flex-shrink-0 rounded-sm px-6 py-2 hover:opacity-90'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   fill='none'
@@ -79,7 +82,7 @@ export default function Header() {
                               <div className='truncate'>{purchase.product.name}</div>
                             </div>
                             <div className='ml-2 flex-shrink-0'>
-                              <span className='text-oranges'>₫{formatCurrency(purchase.product.price)}</span>
+                              <span className='text-blues'>₫{formatCurrency(purchase.product.price)}</span>
                             </div>
                           </div>
                         ))}
@@ -91,7 +94,7 @@ export default function Header() {
                         </div>
                         <Link
                           to={path.cart}
-                          className='rounded-sm bg-oranges px-4 py-2 capitalize text-white hover:bg-opacity-90'
+                          className='rounded-sm bg-blues-gradient px-4 py-2 capitalize text-white hover:bg-opacity-90'
                         >
                           Xem giỏ hàng
                         </Link>
@@ -122,7 +125,7 @@ export default function Header() {
                   />
                 </svg>
                 {purchasesInCart && purchasesInCart.length > 0 && (
-                  <span className='absolute left-[17px] top-[-5px] rounded-full bg-white px-[9px] py-[1px] text-xs text-oranges '>
+                  <span className='absolute left-[17px] top-[-5px] rounded-full bg-white px-[9px] py-[1px] text-xs text-blues '>
                     {purchasesInCart?.length}
                   </span>
                 )}

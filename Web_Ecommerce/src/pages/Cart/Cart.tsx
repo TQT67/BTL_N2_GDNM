@@ -246,7 +246,7 @@ export default function Cart() {
                               />
                             </div>
                             <div className='col-span-1'>
-                              <span className='text-oranges'>
+                              <span className='text-blues'>
                                 ₫{formatCurrency(purchase.product.price * purchase.buy_count)}
                               </span>
                             </div>
@@ -288,15 +288,15 @@ export default function Cart() {
                 <div>
                   <div className='flex items-center sm:justify-end'>
                     <div>Tổng thanh toán ({checkedPurchasesCount} sản phẩm):</div>
-                    <div className='ml-2 text-2xl text-oranges'>₫{formatCurrency(totalCheckedPurchasePrice)}</div>
+                    <div className='ml-2 text-2xl text-blues'>₫{formatCurrency(totalCheckedPurchasePrice)}</div>
                   </div>
                   <div className='flex items-center text-sm sm:justify-end'>
                     <div className='text-gray-500'>Tiết kiệm</div>
-                    <div className='ml-6 text-oranges'>₫{formatCurrency(totalCheckedPurchaseSavingPrice)}</div>
+                    <div className='ml-6 text-blues'>₫{formatCurrency(totalCheckedPurchaseSavingPrice)}</div>
                   </div>
                 </div>
                 <Button
-                  className='mt-5 flex h-10 w-52 items-center justify-center bg-oranges text-sm uppercase text-white hover:opacity-90 sm:ml-4 sm:mt-0'
+                  className='mt-5 flex h-10 w-52 items-center justify-center bg-blues-gradient text-sm uppercase text-white hover:opacity-90 sm:ml-4 sm:mt-0'
                   onClick={handleBuyPurchases}
                   disabled={buyProductsMutation.isLoading}
                 >
@@ -312,7 +312,7 @@ export default function Cart() {
             <div className='mt-5 text-center'>
               <Link
                 to={path.home}
-                className=' rounded-sm bg-oranges px-10 py-2  uppercase text-white transition-all hover:opacity-90'
+                className=' rounded-sm bg-blues-gradient px-10 py-2  uppercase text-white transition-all hover:opacity-90'
               >
                 Mua ngay
               </Link>

@@ -66,7 +66,7 @@ export default function AsideFilter({ queryConfig, categories }: Props) {
       <Link
         to={path.home}
         className={classNames('flex items-center font-bold', {
-          'text-oranges': !category
+          'text-blues': !category
         })}
       >
         <svg viewBox='0 0 12 10' className='mr-3 h-4 w-3 fill-current'>
@@ -99,7 +99,7 @@ export default function AsideFilter({ queryConfig, categories }: Props) {
                   }).toString()
                 }}
                 className={classNames('relative px-2', {
-                  'font-semibold text-oranges': isActive
+                  'font-semibold text-blues': isActive
                 })}
               >
                 {isActive && (
@@ -181,8 +181,8 @@ export default function AsideFilter({ queryConfig, categories }: Props) {
               }}
             />
           </div>
-          <div className='mt-1 min-h-[1.25rem] text-center text-sm text-oranges'>{errors.price_min?.message}</div>
-          <Button className='flex w-full items-center justify-center bg-oranges p-2 text-sm uppercase text-white hover:opacity-90'>
+          <div className='mt-1 min-h-[1.25rem] text-center text-sm text-blues'>{errors.price_min?.message}</div>
+          <Button className='flex w-full items-center justify-center bg-blues-gradient p-2 text-sm uppercase text-white hover:opacity-90'>
             Áp dụng
           </Button>
         </form>
@@ -193,7 +193,7 @@ export default function AsideFilter({ queryConfig, categories }: Props) {
       <div className='my-4 h-[1px] bg-gray-300' />
       <Button
         onClick={handleRemoveAll}
-        className='flex w-full items-center justify-center bg-oranges p-2 text-sm uppercase text-white hover:opacity-90'
+        className='flex w-full items-center justify-center bg-blues-gradient p-2 text-sm uppercase text-white hover:opacity-90'
       >
         Xóa tất cả
       </Button>

@@ -4,10 +4,13 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'header-image': "url('../src/images/sg-11134004-7rbnd-ln2u4n7zfkag0a.png')"
+        'header-image': "url('/BannerShopee.png')",
+        'blues-gradient': 'linear-gradient(180deg, #00BBFF 0%, #02A5E0 39.5%, #006E96 75.5%, #005E80 100%)'
       },
+
       colors: {
-        oranges: '#ee4d2d'
+        oranges: '#ee4d2d',
+        blues: '#4876FF'
       }
     }
   },
