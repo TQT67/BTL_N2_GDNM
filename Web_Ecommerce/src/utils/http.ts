@@ -22,7 +22,7 @@ import { ErrorResponse } from 'src/types/utils.type'
 // Refresh Token mới cho me: 5 - 6
 // Gọi lại Me: 6
 
-class Http {
+export class Http {
   instance: AxiosInstance
   private accessToken: string
   private refreshToken: string
@@ -89,10 +89,9 @@ class Http {
         // Nếu là lỗi 401
         if (isAxiosUnauthorizedError<ErrorResponse<{ name: string; message: string }>>(error)) {
           const config = error.response?.config || {}
-          const { url } = config
+          const url = config
           // Trường hợp Token hết hạn và request đó không phải là của request refresh token
           // thì chúng ta mới tiến hành gọi refresh token
-          console.log(config)
           if (isAxiosExpiredTokenError(error) && url !== URL_REFRESH_TOKEN) {
             // Hạn chế gọi 2 lần handleRefreshToken
             this.refreshTokenRequest = this.refreshTokenRequest
@@ -105,7 +104,7 @@ class Http {
                 })
             return this.refreshTokenRequest.then((access_token) => {
               // Nghĩa là chúng ta tiếp tục gọi lại request cũ vừa bị lỗi
-              return this.instance({ ...config, headers: { ...config.headers, authorization: access_token } })
+              return this.instance({ ...config, headers: { authorization: access_token } })
             })
           }
 

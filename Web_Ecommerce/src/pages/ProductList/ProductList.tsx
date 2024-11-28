@@ -29,7 +29,7 @@ export default function ProductList() {
   })
 
   return (
-    <div className='bg-gray-200 py-6'>
+    <div className='bg-gray-200 px-4 py-6'>
       <Helmet>
         <title>Trang chủ | LOGO SHOP</title>
         <meta name='description' content='Trang chủ dự án LOGO SHOP' />
